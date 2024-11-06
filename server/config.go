@@ -3,10 +3,10 @@ package main
 import "time"
 
 var CFGAdminAccount = map[string]string{
-	"admin": "***REMOVED***",
+	"admin": "DinoKhoa@1234",
 }
 var CFGClientAccount = map[string]string{
-	"client": "***REMOVED***",
+	"client": "DinoKhoa1234",
 	"admin": CFGAdminAccount["admin"],
 }
 var CFGMaxVNCConns = 100
