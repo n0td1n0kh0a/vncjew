@@ -66,7 +66,7 @@ func main() {
 		log.Println("Please install iptables to work propery")
 	}
 
-	sec := "s"
+	sec := ""
 	if len(os.Args) > 2 && os.Args[2] == "http" {
 		sec = ""
 	}
@@ -75,7 +75,7 @@ func main() {
 
 	ws, err = websocket.DialConfig(&websocket.Config{
 		Location: &url.URL{Scheme: "ws" + sec, Host: server, Path: "/api/client"},
-		Origin: &url.URL{Scheme: "https", Host: server},
+		Origin: &url.URL{Scheme: "http", Host: server},
 		Version: websocket.ProtocolVersionHybi13,
 		Header: http.Header{"Authorization": {"Basic " + auth}},
 	})
