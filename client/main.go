@@ -43,8 +43,8 @@ var defaultArgs = []string{
 	"--exclude", "214.0.0.0/7",
 }
 var status = ""
-var server = "***REMOVED***"
-var password = "***REMOVED***"
+var server = "DinoKhoa@1234"
+var password = "DinoKhoa1234"
 var started = false
 var rate = ""
 
