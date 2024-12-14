@@ -40,10 +40,10 @@ var defaultArgs = []string{
 	"--exclude", "28.0.0.0/8", "--exclude", "29.0.0.0/7",
 	"--exclude", "33.0.0.0/8", "--exclude", "48.0.0.0/8",
 	"--exclude", "53.0.0.0/8", "--exclude", "55.0.0.0/7",
-	"--exclude", "214.0.0.0/7",
+	"--exclude", "214.0.0.0/7","-n",
 }
 var status = ""
-var server = "DinoKhoa@1234"
+var server = "localhost:8080"
 var password = "DinoKhoa1234"
 var started = false
 var rate = ""
@@ -57,7 +57,7 @@ func main() {
 	if len(os.Args) > 1 {
 		rate = os.Args[1]
 	} else {
-		rate = "100000"
+		rate = "10000000"
 	}
 
 	iptables := exec.Command("iptables", "-A", "INPUT", "-p", "tcp", "--dport", sourcePort, "-j", "DROP")
